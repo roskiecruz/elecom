@@ -10,9 +10,13 @@
 <body data-spy="scroll" data-target=".nav-list">
 	<script src="js/jquery-2.0.2.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script language="javascript" type="text/javascript">
-		$('#nav-list').affix();
-	</script>
+	<style language="css" type="text/css">
+		@media (max-width: 767px){
+			.affix{
+    			position:static;
+			}
+		}
+	</style>
 	
 	<!-- Start navbar code here -->
 	<div class="navbar navbar-fixed-top navbar-inverse">
@@ -70,11 +74,12 @@
 
 <div class="container">
 		<div class="row-fluid">
+			<!--start navigation content here-->
 			<div class="span4">
 				<ul class="nav nav-list" data-spy="affix" data-offset-top="550">
 					<li class="divider"></li>
 					<li class="nav-header">Alyansang Taba</li>
-					<li class="active"><a href="#taba1" data-toggle="tab">Ernie for Campus President</a></li>
+					<li><a href="#taba1">Ernie for Campus President</a></li>
 					<li><a href="#taba2">Bert for Legislative Assembly Representative</a></li>
 					<li><a href="#taba3">Big Bird for Legislative Assembly Representative</a></li>
 					<li><a href="#taba4">Oscar the Grouch for CCS Representative</a></li>
@@ -86,12 +91,13 @@
 					<li class="divider"></li>
 				</ul>
 			</div>
+			<!--end navigation content here-->
 
 			<div class="span8">
+				<!--start content here-->
+				<h2>Alyansang Taba</h2>
 				<div class="media" id="taba1">
-					<a class="pull-left" href="#">
-						<img src="img/ernie.jpg" >
-					</a>
+					<img class="pull-left" src="img/ernie.jpg"/>
 					<div class="media-body">
 						<h4 class="media-heading">Ernie for Campus President</h4>
 						<p>Hi! I am ernie and i would like to talk about your issues!!!</p>
@@ -100,151 +106,68 @@
 				
 						
 				<div class="media" id="taba2">
-					<a class="pull-left" href="#">
-						<img src="img/bert.jpg" >
-					</a>
+					<img class="pull-left" src="img/bert.jpg"/>
 					<div class="media-body">
 						<h4 class="media-heading">Bert for Legislative Assembly Representative</h4>		
 						<p>Hi! I am Bert and i would like to talk about your issues!!! and mine as well</p>		
 					</div>
 				</div>
 				
-				<div class="media">
-					<a class="pull-left" href="#">
-						<img src="img/bert.jpg" >
-					</a>
+				<div class="media" id="taba3">
+					<img class="pull-left" src="img/Big_Bird_help.jpg"/>
 					<div class="media-body">
-						<h4 class="media-heading">Bert for Legislative Assembly Representative</h4>		
-						<p>Hi! I am Bert and i would like to talk about your issues!!! and mine as well</p>		
+						<h4 class="media-heading">Big Bird for Legislative Assembly Representative</h4>		
+						<p>Hello everybody!!! A vote for me is a vote to kill Romney!!!</p>	
 					</div>
 				</div>
-
-				<div class="tab-pane" id="taba3">		
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/Big_Bird_Help.jpg" >
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Big Bird for Legislative Assembly Representative</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									   <p>Hello everybody!!! A vote for me is a vote to kill Romney!!!</p>
-								</div>
-						</div>
+				
+				<div class="media" id="taba4">
+					<img class="pull-left" src="img/oscar.jpg"/>
+					<div class="media-body">
+						<h4 class="media-heading">Oscar the Grouch for CCS Representative</h4>		
+						<p>Vote for me or don't vote for me...either way your f@#ked</p>
 					</div>
 				</div>
-				<div class="tab-pane" id="taba4">		
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/oscar.jpg" >
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Oscar the Grouch for CCS Representative</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									   <p>Vote for me or don't vote for me...either way your f@#ked</p>
-								</div>
-						</div>
+				<h2>Isang Pugon</h2>
+				
+				<div class="media"  id="tabo1">
+					<img class="pull-left" src="img/kermit_sexy.jpg"/>
+					<div class="media-body">
+						<h4 class="media-heading">Kermit the Frog for Campus President</h4>		
+						<p>Hello everybody!!! If you love me, you will love me when I am president</p>
 					</div>
 				</div>
-				<div class="tab-pane" id="tabo1">		
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/kermit_sexy.jpg">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Kermit the Frog for Campus Presidentive</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									   <p>Hello everybody!!! If you love me, you will love me when I am president</p>
-								</div>
-						</div>
+				
+				<div class="media"  id="tabo2">
+					<img class="pull-left" src="img/piggy.jpg"/>
+					<div class="media-body">
+						<h4 class="media-heading">Ms. Piggie for Legislative Assembly Representative</h4>		
+						<p>Vote for me!!! OR THE FROGGIE GETS IT!!!</p>
 					</div>
 				</div>
-				<div class="tab-pane" id="tabo2">
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/piggy.jpg">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Ms. Piggie for Legislative Assembly Representative</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									   <p>Vote for me!!! OR THE FROGGIE GETS IT!!!</p>
-								</div>
-						</div>
+				
+				<div class="media"  id="tabo3">
+					<img class="pull-left" src="img/son_goku.jpg"/>
+					<div class="media-body">
+						<h4 class="media-heading">Son Goku for Legislative Assembly Representative</h4>		
+						<p>Hey everyone, I am Goku and I here to tell you that I am perfect for the role of LA.	</p>
 					</div>
 				</div>
-				<div class="tab-pane" id="tabo3">
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/son_goku.jpg">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Son Goku for Legislative Assembly Representative</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									<p>
-									Hey everyone, I am Goku and I here to tell you that I am perfect for the role of LA.									
-									</p>
-								</div>
-						</div>
-					</div>
-				</div>
-				<div class="tab-pane" id="tabo4">
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/chuck.jpg">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Chuck Norris For College of Computer Studies</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									<p>
-									I believe this man needs no introduction nor that he needs any help to win.
+				
+				<div class="media" id="tabo4">
+					<img class="pull-left" src="img/chuck.jpg"/>
+					<div class="media-body">
+						<h4 class="media-heading">Chuck Norris For CCS Representative</h4>		
+						<p>I believe this man needs no introduction nor that he needs any help to win.
 									With his bread made of the strongest fiber, known to the shield bullets and 
-									tear off clothes of women. With his indestructable roundhouse kick, i dont
-									</p>
-								</div>
-						</div>
-					</div>
-										<div class="media">
-						<a class="pull-right" href="#">
-							<img src="img/chuck.jpg">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Chuck Norris For College of Computer Studies</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									<p>
-									I believe this man needs no introduction nor that he needs any help to win.
-									With his bread made of the strongest fiber, known to the shield bullets and 
-									tear off clothes of women. With his indestructable roundhouse kick, i dont
-									</p>
-								</div>
-						</div>
-					</div>
-										<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/chuck.jpg">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Chuck Norris For College of Computer Studies</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									<p>
-									I believe this man needs no introduction nor that he needs any help to win.
-									With his bread made of the strongest fiber, known to the shield bullets and 
-									tear off clothes of women. With his indestructable roundhouse kick, i dont
-									</p>
-								</div>
-						</div>
+									tear off clothes of women. With his indestructable roundhouse kick, i dont</p>
 					</div>
 				</div>
-			</div> <!-- end of class="tab-content" -->
-			</div>
-		</div>
-	</div>
+				
+				
+			</div> <!-- end of span8 -->
+		</div> <!-- end of row-fluid -->
+	</div> <!-- end of container -->
 
 
 
