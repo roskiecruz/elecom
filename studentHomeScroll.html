@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/bootstrap-responsive.css"/>
 </head>
-<body>
+<body data-spy="scroll" data-target=".nav-list">
 	<script src="js/jquery-2.0.2.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	
@@ -32,7 +32,7 @@
 	</div>
 	<!-- End navbar code here -->
 	
-	<!--<center>
+	<!-- <center>
 	<div class="hero-unit">
 	
 		<h1>Exercise your right to vote!</h1>
@@ -56,61 +56,66 @@
 	</center>
 	-->
 	
+	
 	<div class="hero-unit">
 		<img src="img/Elecom_Logo.jpg" source width="304" height="228">
 			<h1>Candidates</h1>
-				<p>Get to know your candidates for this year's General Elections! Click the navigation bar on the left to view a description of your candidates and what they believe in.</p>
+				<p>Get to know your candidates for this year's General Elections!
+				Click the navigation bar on the left to view a description of your candidates and what they believe in.</p>
 	</div>
 	
+
 <div class="container">
-	<!-- The Navigation Side-bar -->
-	<!--#taba and #tabo are the variables i used to link the "tab-content" -->
-			<div class="tabbable tabs-left"> 
-				<ul class="nav nav-tabs span4">
+		<div class="row-fluid">
+			<div class="span4">
+				<ul class="nav nav-list" data-spy="affix" data-offset-top="550">
+					<li class="divider"></li>
 					<li class="nav-header">Alyansang Taba</li>
 					<li class="active"><a href="#taba1" data-toggle="tab">Ernie for Campus President</a></li>
-					<li><a href="#taba2" data-toggle="tab">Bert for Legislative Assembly Representative</a></li>
-					<li><a href="#taba3" data-toggle="tab">Big Bird for Legislative Assembly Representative</a></li>
-					<li><a href="#taba4" data-toggle="tab">Oscar the Grouch for CCS Representative</a></li>
-            
+					<li><a href="#taba2">Bert for Legislative Assembly Representative</a></li>
+					<li><a href="#taba3">Big Bird for Legislative Assembly Representative</a></li>
+					<li><a href="#taba4">Oscar the Grouch for CCS Representative</a></li>
 					<li class="nav-header">Isang Pugon</li>
-					
-					<li><a href="#tabo1" data-toggle="tab">Kermit for Campus President</a></li>
-					<li><a href="#tabo2" data-toggle="tab">Ms. Piggie for Legislative Assembly Representative</a></li>
-					<li><a href="#tabo3" data-toggle="tab">Son Goku for Legislative Assembly Representative</a></li>
-					<li><a href="#tabo4" data-toggle="tab">Chuck Norris for CCS Representative</a></li>
+					<li><a href="#tabo1">Kermit for Campus President</a></li>
+					<li><a href="#tabo2">Ms. Piggie for Legislative Assembly Representative</a></li>
+					<li><a href="#tabo3">Son Goku for Legislative Assembly Representative</a></li>
+					<li><a href="#tabo4">Chuck Norris for CCS Representative</a></li>
+					<li class="divider"></li>
 				</ul>
-			<!-- This is where all the descriptions for each candidate is located -->
-			
-			<div class="tab-content">
-				<div class="tab-pane active" id="taba1">		
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/ernie.jpg" >
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Ernie for Campus President</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									   <p>Hi! I am ernie and i would like to talk about your issues!!!</p>
-								</div>
-						</div>
-					</div>
-				</div>			
-				<div class="tab-pane" id="taba2">		
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img src="img/bert.jpg" >
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">Bert for Legislative Assembly Representative</h4>
-						<!-- Nested media object -->
-								<div class="media">
-									   <p>Hi! I am Bert and i would like to talk about your issues!!! and mine as well</p>
-								</div>
-						</div>
+			</div>
+
+			<div class="span8">
+				<div class="media" id="taba1">
+					<a class="pull-left" href="#">
+						<img src="img/ernie.jpg" >
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">Ernie for Campus President</h4>
+						<p>Hi! I am ernie and i would like to talk about your issues!!!</p>
 					</div>
 				</div>
+				
+						
+				<div class="media" id="taba2">
+					<a class="pull-left" href="#">
+						<img src="img/bert.jpg" >
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">Bert for Legislative Assembly Representative</h4>		
+						<p>Hi! I am Bert and i would like to talk about your issues!!! and mine as well</p>		
+					</div>
+				</div>
+				
+				<div class="media">
+					<a class="pull-left" href="#">
+						<img src="img/bert.jpg" >
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">Bert for Legislative Assembly Representative</h4>		
+						<p>Hi! I am Bert and i would like to talk about your issues!!! and mine as well</p>		
+					</div>
+				</div>
+
 				<div class="tab-pane" id="taba3">		
 					<div class="media">
 						<a class="pull-left" href="#">
@@ -234,9 +239,9 @@
 					</div>
 				</div>
 			</div> <!-- end of class="tab-content" -->
-		</div>	<!-- end of class="tabbable tabs-left" -->
+			</div>
+		</div>
 	</div>
-</div><!-- end of class = "container"-->
 
 
 
