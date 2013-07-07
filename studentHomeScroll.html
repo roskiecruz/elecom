@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/bootstrap-responsive.css"/>
 </head>
-<body data-spy="scroll" data-target=".nav-list">
+<body data-spy="scroll" data-target=".navspy">
 	<script src="js/jquery-2.0.2.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<style language="css" type="text/css">
@@ -39,31 +39,6 @@
 	</div>
 	<!-- End navbar code here -->
 	
-	<!-- <center>
-	<div class="hero-unit">
-	
-		<h1>Exercise your right to vote!</h1>
-		<br/>
-		
-		<div class="container row-fluid">
-			<div class="span4">
-			</div>
-			<div class="span4">
-				<form class="form-signin">
-      			<input type="text" class="input-block-level" id="inputStudentID" placeholder="Student Number">
-      			<input type="password" class="input-block-level" id="inputPassword" placeholder="Password">
-				<button type="submit" class="btn btn-success btn-large">Start voting!</a>
-				</form>
-			</div>
-			<div class="span4">
-			</div>
-		</div>
-		
-	</div>
-	</center>
-	-->
-	
-	
 	<div class="hero-unit">
 		<img src="img/Elecom_Logo.jpg" source width="304" height="228">
 			<h1>Candidates</h1>
@@ -76,6 +51,7 @@
 		<div class="row-fluid">
 			<!--start navigation content here-->
 			<div class="span4">
+				<section class="navspy">
 				<ul class="nav nav-list" data-spy="affix" data-offset-top="550">
 					<li class="divider"></li>
 					<li class="nav-header">Alyansang Taba</li>
@@ -90,10 +66,11 @@
 					<li><a href="#tabo4">Chuck Norris for CCS Representative</a></li>
 					<li class="divider"></li>
 				</ul>
+				</section>
 			</div>
 			<!--end navigation content here-->
 
-			<div class="span8">
+			<div class="span8" data-spy="scroll" data-target=".navspy">
 				<!--start content here-->
 				<h2>Alyansang Taba</h2>
 				<div class="media" id="taba1">
@@ -130,7 +107,7 @@
 				</div>
 				<h2>Isang Pugon</h2>
 				
-				<div class="media"  id="tabo1">
+				<div class="media" id="tabo1">
 					<img class="pull-left" src="img/kermit_sexy.jpg"/>
 					<div class="media-body">
 						<h4 class="media-heading">Kermit the Frog for Campus President</h4>		
@@ -138,7 +115,7 @@
 					</div>
 				</div>
 				
-				<div class="media"  id="tabo2">
+				<div class="media" id="tabo2">
 					<img class="pull-left" src="img/piggy.jpg"/>
 					<div class="media-body">
 						<h4 class="media-heading">Ms. Piggie for Legislative Assembly Representative</h4>		
@@ -146,7 +123,7 @@
 					</div>
 				</div>
 				
-				<div class="media"  id="tabo3">
+				<div class="media" id="tabo3">
 					<img class="pull-left" src="img/son_goku.jpg"/>
 					<div class="media-body">
 						<h4 class="media-heading">Son Goku for Legislative Assembly Representative</h4>		
