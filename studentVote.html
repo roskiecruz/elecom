@@ -69,9 +69,9 @@
 				</div>
 				
 				<h3>College Representative</h2>
-				<div class="btn-group" data-toggle="buttons-radio">
-  					<button type="button" class="btn btn-success" id="ColRep" value="oscar">Oscar the Grouch</button>
-  					<button type="button" class="btn btn-success" id="ColRep" value="chuck">Chuck Norris</button>
+				<div class="btn-group" data-toggle="buttons-radio" id="ColRep">
+  					<button type="button" class="btn btn-success" id="oscar">Oscar the Grouch</button>
+  					<button type="button" class="btn btn-success" id="chuck">Chuck Norris</button>
 				</div>
 				<br/>
 				<br/>
@@ -79,9 +79,9 @@
   					<input type="hidden" id="ColRepVar"/>
 				
 				<script type="text/javascript" language="javascript">
-					$("#ColRep").click(function () {
-   						 $("#ColRepVar").val($(this).text());
-					});
+					$('#ColRep button').click(function(){
+						$("#ColRepVar").attr('value', $(this).attr('id'));
+					})
 				</script>
 				
 				<button type="submit" class="btn btn-large btn-success">Submit my vote</button>
