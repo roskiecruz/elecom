@@ -5,7 +5,7 @@ $userpass=$_POST['inputPassword'];
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 if ($username == $userpass){
- header("location:studentHome.html");
+ header("location:studentHomeScroll.html");
  }
 else if ($username == 'elecom' && $userpass == $username )
 	header("location: elecomSetting.html");
