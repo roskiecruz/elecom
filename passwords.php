@@ -1,15 +1,16 @@
 <?php
 // username and password sent from form 
-$username=$_POST["inputStudentID"]; 
-$password=$_POST["inputPassword"]; 
-$defaultUser="CD";
-$defaultpass="CD";
+$username=$_POST['inputStudentID'];
+$userpass=$_POST['inputPassword'];
 
 // If result matched $myusername and $mypassword, table row must be 1 row
-if ($_POST["inputStudentID" == $password){
-header("location:studentHome.html");
+if ($username == $userpass){
+ header("location:studentHome.html");
+ }
+else if ($username == 'elecom' && $userpass == $username )
+	header("location: elecomSetting.html");
+ else {
+echo "ERROR MUTHAFUCKA"; 
 }
-else {
-echo "Wrong Username or Password";
-}
+
 ?>
