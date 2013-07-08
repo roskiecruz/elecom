@@ -58,6 +58,7 @@
   					<button type="button" class="btn btn-success" value="erns">Ernie</button>
   					<button type="button" class="btn btn-success" value="kerms">Kermit Frog</button>
 				</div>
+				<input type="hidden" name="status" id="status" value="" />
 				
 				<h3>Legislative Assembly Representatives</h2>
 				<div class="btn-group" data-toggle="buttons-radio" name="LegAsembl">
@@ -68,12 +69,22 @@
 				</div>
 				
 				<h3>College Representative</h2>
-				<div class="btn-group" data-toggle="buttons-radio" name="ColRep">
+				<div class="btn-group" data-toggle="buttons-radio" id="ColRep">
   					<button type="button" class="btn btn-success" value="oscar">Oscar the Grouch</button>
   					<button type="button" class="btn btn-success" value="chuck">Chuck Norris</button>
 				</div>
 				<br/>
-				<button type="submit" class="btn btn-success">Submit my vote</button>
+				<br/>
+				<br/>
+  					<input type="hidden" id="ColRepVar"/>
+				
+				<script type="text/javascript" language="javascript">
+					$("#ColRep").click(function () {
+   						 $("#ColRepVar").val($(this).text());
+					});
+				</script>
+				
+				<button type="submit" class="btn btn-large btn-success">Submit my vote</button>
 				</form>
 				
 			</div>
