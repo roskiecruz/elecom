@@ -54,19 +54,33 @@
 			
 				<form id="ballot" action="success.php" method="post">
 				<h3>Campus President</h2>
-				<div class="btn-group" data-toggle="buttons-radio" name="CampPres">
-  					<button type="button" class="btn btn-success" value="erns">Ernie</button>
-  					<button type="button" class="btn btn-success" value="kerms">Kermit Frog</button>
+				<div class="btn-group" data-toggle="buttons-radio" id="CampPres">
+  					<button type="button" class="btn btn-success" id="erns">Ernie</button>
+  					<button type="button" class="btn btn-success" id="kerms">Kermit Frog</button>
 				</div>
-				<input type="hidden" name="status" id="status" value="" />
+				<input type="hidden" name="CampPresVar" id="CampPresVar">
+				
+				<script type="text/javascript" language="javascript">
+					$('#CampPres button').click(function(){
+						$("#CampPresVar").attr('value', $(this).attr('id'));
+					})
+				</script>
 				
 				<h3>Legislative Assembly Representatives</h2>
-				<div class="btn-group" data-toggle="buttons-radio" name="LegAsembl">
-  					<button type="button" class="btn btn-success" value="bert">Bert</button>
-  					<button type="button" class="btn btn-success" value="bird">Big Bird</button>
-					<button type="button" class="btn btn-success" value="pig">Ms. Piggie</button>
-					<button type="button" class="btn btn-success" value="goku">Son Goku</button>
+				<div class="btn-group" data-toggle="buttons-radio" id="LegAsembl">
+  					<button type="button" class="btn btn-success" id="bert">Bert</button>
+  					<button type="button" class="btn btn-success" id="bird">Big Bird</button>
+					<button type="button" class="btn btn-success" id="pig">Ms. Piggie</button>
+					<button type="button" class="btn btn-success" id="goku">Son Goku</button>
 				</div>
+				
+				<input type="hidden" name="LegAsemblVar" id="LegAsemblVar">
+				
+				<script type="text/javascript" language="javascript">
+					$('#LegAsembl button').click(function(){
+						$("#LegAsemblVar").attr('value', $(this).attr('id'));
+					})
+				</script>
 				
 				<h3>College Representative</h2>
 				<div class="btn-group" data-toggle="buttons-radio" id="ColRep">
@@ -76,7 +90,8 @@
 				<br/>
 				<br/>
 				<br/>
-  					<input type="hidden" id="ColRepVar"/>
+				
+  					<input type="hidden" name="ColRepVar" id="ColRepVar">
 				
 				<script type="text/javascript" language="javascript">
 					$('#ColRep button').click(function(){
@@ -84,7 +99,8 @@
 					})
 				</script>
 				
-				<button type="submit" class="btn btn-large btn-success">Submit my vote</button>
+				<input type="submit" class="btn btn-large btn-success" value="Submit my vote">
+				
 				</form>
 				
 			</div>
