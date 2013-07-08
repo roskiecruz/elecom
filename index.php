@@ -36,9 +36,9 @@ Made with Bootstrap v2.3.2
 			</div>
 			<div class="span4">
 			<!--I added this to test out the passwords.php-->
-				<form class="form-signin" action="passwords.php" method="post">
-      			<input name="inputStudentID" type="text" class="input-block-level"  placeholder="Student Number">
-      			<input name="inputPassword" type="password" class="input-block-level" placeholder="Password">
+				<form class="form-signin" class="login-form" action="passwords.php" method="post">
+      			<input name="inputStudentID" type="text" class="input-block-level" id="inputStudentID" name="inputStudentID" placeholder="Student Number">
+      			<input name="inputPassword" type="password" class="input-block-level" id="inputPassword"name="inputPassword" placeholder="Password">
 				<button type="submit">Start voting!</a>
 				</form>
 			</div>
