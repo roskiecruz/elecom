@@ -53,24 +53,24 @@
 			<div class="span8">
 			
 				<form id="ballot" action="success.php" method="post">
-				<h3 id="CampPres">Campus President</h2>
-				<div class="btn-group" data-toggle="buttons-radio">
-  					<button type="button" class="btn btn-success">Ernie</button>
-  					<button type="button" class="btn btn-success">Kermit Frog</button>
+				<h3>Campus President</h2>
+				<div class="btn-group" data-toggle="buttons-radio" name="CampPres">
+  					<button type="button" class="btn btn-success" value="erns">Ernie</button>
+  					<button type="button" class="btn btn-success" value="kerms">Kermit Frog</button>
 				</div>
 				
-				<h3 id="LegAsmbl">Legislative Assembly Representatives</h2>
-				<div class="btn-group" data-toggle="buttons-radio">
-  					<button type="button" class="btn btn-success">Bert</button>
-  					<button type="button" class="btn btn-success">Big Bird</button>
-					<button type="button" class="btn btn-success">Ms. Piggie</button>
-					<button type="button" class="btn btn-success">Son Goku</button>
+				<h3>Legislative Assembly Representatives</h2>
+				<div class="btn-group" data-toggle="buttons-radio" name="LegAsembl">
+  					<button type="button" class="btn btn-success" value="bert">Bert</button>
+  					<button type="button" class="btn btn-success" value="bird">Big Bird</button>
+					<button type="button" class="btn btn-success" value="pig">Ms. Piggie</button>
+					<button type="button" class="btn btn-success" value="goku">Son Goku</button>
 				</div>
 				
-				<h3 id="ColRep">College Representative</h2>
-				<div class="btn-group" data-toggle="buttons-radio">
-  					<button type="button" class="btn btn-success">Oscar the Grouch</button>
-  					<button type="button" class="btn btn-success">Chuck Norris</button>
+				<h3>College Representative</h2>
+				<div class="btn-group" data-toggle="buttons-radio" name="ColRep">
+  					<button type="button" class="btn btn-success" value="oscar">Oscar the Grouch</button>
+  					<button type="button" class="btn btn-success" value="chuck">Chuck Norris</button>
 				</div>
 				<br/>
 				<button type="submit" class="btn btn-success">Submit my vote</button>
