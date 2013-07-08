@@ -49,7 +49,7 @@
 					<li class="nav-header">Notice</li>
 					<li class="">Once you make your choice, you will no longer be able to edit your vote so... vote wisely. </li>
 				</ul>
-			</div>
+			</div> <!-- code for notice on the left -->
 			<div class="span8">
 			
 				<form id="ballot" action="success.php" method="post">
@@ -65,6 +65,8 @@
 						$("#CampPresVar").attr('value', $(this).attr('id'));
 					})
 				</script>
+				
+				<!-- as button gets clicked, value of input -->
 				
 				<h3>Legislative Assembly Representatives</h2>
 				<div class="btn-group" data-toggle="buttons-radio" id="LegAsembl">
@@ -99,8 +101,23 @@
 					})
 				</script>
 				
-				<input type="submit" class="btn btn-large btn-success" value="Submit my vote">
+				<input href="#confirmModal" type="submit" class="btn btn-large btn-success" value="Submit my vote" data-toggle="modal"/>
 				
+				<!-- Start pop-up -->
+				<div id="confirmModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  					<div class="modal-header">
+    					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> <!-- close button -->
+    					<h3 id="modalLabel">Confirm Data Submission</h3>
+  					</div>
+ 					 <div class="modal-body">
+							<p>Are you sure with your choices?</p>
+ 					 </div>
+  				<div class="modal-footer">
+    				<button class="btn" data-dismiss="modal" aria-hidden="true">No</button>
+    				<button class="btn btn-success">Yes</button>
+ 		 		</div>
+				</div>
+				<!-- End pop-up -->
 				</form>
 				
 			</div>
