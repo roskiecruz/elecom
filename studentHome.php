@@ -63,8 +63,8 @@
 	</div>
 	
 <div class="container">
-	<!-- The Navigation Side-bar -->
-	<!--#taba and #tabo are the variables i used to link the "tab-content" -->
+<!-- The Navigation Side-bar -->
+<!--#taba and #tabo are the variables i used to link the "tab-content" -->
 			<div class="tabbable tabs-left"> 
 				<ul class="nav nav-tabs span4">
 					<li class="nav-header">Alyansang Taba</li>
@@ -80,7 +80,8 @@
 					<li><a href="#tabo3" data-toggle="tab">Son Goku for Legislative Assembly Representative</a></li>
 					<li><a href="#tabo4" data-toggle="tab">Chuck Norris for CCS Representative</a></li>
 				</ul>
-			<!-- This is where all the descriptions for each candidate is located -->
+			</div>	<!-- end of class="tabbable tabs-left" -->
+<!-- This is where all the descriptions for each candidate is located -->
 			
 			<div class="tab-content">
 				<div class="tab-pane active" id="taba1">		
@@ -234,7 +235,7 @@
 					</div>
 				</div>
 			</div> <!-- end of class="tab-content" -->
-		</div>	<!-- end of class="tabbable tabs-left" -->
+		
 	</div>
 </div><!-- end of class = "container"-->
 

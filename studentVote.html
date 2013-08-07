@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+<?php
+//session starts here
+	//----------------------------------------------
+	session_start();
+		$_SESSION['inputStudentID'];
+	//----------------------------------------------
+?>
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,7 +18,7 @@
 	<script src="js/jquery-2.0.2.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	
-	<!-- Start navbar code here -->
+<!-- Start navbar code here -->
 	<div class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">
@@ -30,7 +37,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- End navbar code here -->
+<!-- End navbar code here -->
 	
 	<div class="hero-unit">
 	<h1>Ballot</h1>
@@ -49,14 +56,18 @@
 					<li class="nav-header">Notice</li>
 					<li class="">Once you make your choice, you will no longer be able to edit your vote so... vote wisely. </li>
 				</ul>
-			</div> <!-- code for notice on the left -->
+			</div> 
+			
+<!-- code for notice on the left -->
+
 			<div class="span8">
 			
 				<form id="ballot" action="success.php" method="post">
-				<h3>Campus President</h2>
+				<h3>Campus President</h3>
 				<div class="btn-group" data-toggle="buttons-radio" id="CampPres">
   					<button type="button" class="btn btn-success" id="erns">Ernie</button>
   					<button type="button" class="btn btn-success" id="kerms">Kermit Frog</button>
+					<button type="button" class="btn btn-success" id="abstain">Abstain</button>
 				</div>
 				<input type="hidden" name="CampPresVar" id="CampPresVar">
 				
@@ -66,14 +77,15 @@
 					})
 				</script>
 				
-				<!-- as button gets clicked, value of input -->
+<!-- as button gets clicked, value of input -->
 				
-				<h3>Legislative Assembly Representatives</h2>
+				<h3>Legislative Assembly Representatives</h3>
 				<div class="btn-group" data-toggle="buttons-radio" id="LegAsembl">
   					<button type="button" class="btn btn-success" id="bert">Bert</button>
   					<button type="button" class="btn btn-success" id="bird">Big Bird</button>
 					<button type="button" class="btn btn-success" id="pig">Ms. Piggie</button>
 					<button type="button" class="btn btn-success" id="goku">Son Goku</button>
+					<button type="button" class="btn btn-success" id="abstain">Abstain</button>
 				</div>
 				
 				<input type="hidden" name="LegAsemblVar" id="LegAsemblVar">
@@ -84,10 +96,11 @@
 					})
 				</script>
 				
-				<h3>College Representative</h2>
+				<h3>College Representative</h3>
 				<div class="btn-group" data-toggle="buttons-radio" id="ColRep">
   					<button type="button" class="btn btn-success" id="oscar">Oscar the Grouch</button>
   					<button type="button" class="btn btn-success" id="chuck">Chuck Norris</button>
+					<button type="button" class="btn btn-success" id="abstain">Abstain</button>
 				</div>
 				<br/>
 				<br/>
@@ -103,7 +116,7 @@
 				
 				<input href="#confirmModal" type="submit" class="btn btn-large btn-success" value="Submit my vote" data-toggle="modal"/>
 				
-				<!-- Start pop-up -->
+<!-- Start pop-up -->
 				<div id="confirmModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
   					<div class="modal-header">
     					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> <!-- close button -->
@@ -117,12 +130,12 @@
     				<button class="btn btn-success">Yes</button>
  		 		</div>
 				</div>
-				<!-- End pop-up -->
+<!-- End pop-up -->
 				</form>
 				
-			</div>
-		</div>
-	</div>
+			</div> <!-- end of "span8" -->
+		</div> <!-- end of "row-fluid" -->
+	</div> <!-- end of class "container" -->
 
 
 

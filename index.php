@@ -18,6 +18,7 @@ Made with Bootstrap v2.3.2
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/bootstrap-responsive.css"/>
 </head>
+
 <body>
 	<script src="js/jquery-2.0.2.min.js"></script>
 	<script src="js/bootstrap.js"></script>
@@ -49,24 +50,6 @@ Made with Bootstrap v2.3.2
 	</div>
 	</center>
 	
-<!-- Start pop-up --><!--
-	<div id="termsAndConditions" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-  		<div class="modal-header">
-    		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    		<h3 id="modalLabel">Terms and Conditions</h3>
-  		</div>
- 		 <div class="modal-body">
-    		<p>You are under oath that you will not share your vote to anyone and that you are protecting the confidentiality of your vote, just as we will.
-			</p>
- 		 </div>
-  		<div class="modal-footer">
-    		<button class="btn" data-dismiss="modal" aria-hidden="true">I Disagree</button>
-    		<button class="btn btn-success">I Agree</button>
-			
- 		 </div>
-	</div>
-<!-- End pop-up -->
-
 
 
 
