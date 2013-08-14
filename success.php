@@ -3,7 +3,6 @@
 	//----------------------------------------------------------
 	session_start();
 	$var1 = $_SESSION['inputStudentID'];
-	$var2 = $_SESSION['inputPassword'];
 	//----------------------------------------------------------
 
 //verifies if the voters ID and password are carried to this file	
@@ -12,9 +11,20 @@
 		echo $var1; 
 			echo "<br/>";
 			
-	echo "verifying the password in Voter ";
-		echo $var2;
-			echo "<br/>";	
+
+//Connect to the database	
+	//-------------------------------------------------
+	mysql_connect("localhost", "root", "")
+			or die(mysql_error());
+	//-------------------------------------------------
+	
+//Select Database
+	//-------------------------------------------------
+	mysql_select_db("elecom") 
+		or die(mysql_error());
+	//-------------------------------------------------
+
+
 	//----------------------------------------------------------
 
 //this the where voters chosen candidate will be placed
@@ -25,12 +35,22 @@
 	echo "<br/>";
 	echo "<br/>";
 
-		echo $_POST['CampPresVar']; 
+		echo $pres=$_POST['CampPresVar']; 
 			echo "<br/>";
-		echo $_POST['LegAsemblVar']; 
+		echo $LA=$_POST['LegAsemblVar']; 
 			echo"<br/>";
-		echo $_POST['ColRepVar']; 
+		echo $Batch=$_POST['ColRepVar']; 
 			echo"<br />";
+			
+mysql_query("
+
+INSERT INTO `tally` (student_id, candidate_name) VALUES
+( '" . $var1 . "' , '" . $pres ."' ),
+( '" . $var1 . "' , '" . $LA ."' ),
+( '" . $var1 . "' , '" . $Batch ."' );
+
+")		
+			
 	//----------------------------------------------------------	
 		
 		
