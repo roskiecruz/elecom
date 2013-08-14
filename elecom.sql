@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2013 at 06:49 PM
--- Server version: 5.5.32
--- PHP Version: 5.4.16
+-- Generation Time: Aug 14, 2013 at 10:17 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `elecom`
 --
-CREATE DATABASE IF NOT EXISTS `elecom` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `elecom`;
 
 -- --------------------------------------------------------
 
@@ -30,9 +28,6 @@ USE `elecom`;
 
 CREATE TABLE IF NOT EXISTS `candidate` (
   `candidate_id` varchar(12) COLLATE latin1_general_ci NOT NULL,
-  `objective` text COLLATE latin1_general_ci,
-  `experience` text COLLATE latin1_general_ci,
-  `achievements` text COLLATE latin1_general_ci,
   `party_id` int(11) NOT NULL,
   `position_id` int(11) NOT NULL,
   `student_id` char(12) COLLATE latin1_general_ci NOT NULL,
@@ -43,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `candidate` (
   KEY `party_id` (`party_id`),
   KEY `position_id` (`position_id`),
   KEY `student_id` (`student_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
 
@@ -612,9 +607,26 @@ INSERT INTO `student_info` (`student_id`, `first_name`, `mid_name`, `last_name`,
 --
 
 CREATE TABLE IF NOT EXISTS `tally` (
-  `candidate_id` varchar(12) NOT NULL,
-  `student_id` varchar(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `candidate_name` varchar(50) NOT NULL,
+  `tally_id` int(5) NOT NULL AUTO_INCREMENT,
+  `student_id` varchar(12) NOT NULL,
+  PRIMARY KEY (`tally_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `tally`
+--
+
+INSERT INTO `tally` (`candidate_name`, `tally_id`, `student_id`) VALUES
+('erns', 1, '200907407028'),
+('bert', 2, '200907407028'),
+('oscar', 3, '200907407028'),
+('erns', 4, ''),
+('bert', 5, ''),
+('oscar', 6, ''),
+('erns', 7, '200907407028'),
+('bert', 8, '200907407028'),
+('oscar', 9, '200907407028');
 
 -- --------------------------------------------------------
 
