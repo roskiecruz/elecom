@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2013 at 08:55 PM
--- Server version: 5.6.11
--- PHP Version: 5.5.1
+-- Generation Time: Aug 14, 2013 at 06:49 PM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -29,20 +29,21 @@ USE `elecom`;
 --
 
 CREATE TABLE IF NOT EXISTS `candidate` (
-  `candidate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `candidate_id` varchar(12) COLLATE latin1_general_ci NOT NULL,
   `objective` text COLLATE latin1_general_ci,
   `experience` text COLLATE latin1_general_ci,
-  `seminars` text COLLATE latin1_general_ci,
   `achievements` text COLLATE latin1_general_ci,
   `party_id` int(11) NOT NULL,
   `position_id` int(11) NOT NULL,
   `student_id` char(12) COLLATE latin1_general_ci NOT NULL,
   `photo_path` text COLLATE latin1_general_ci,
+  `candidate_fname` varchar(50) COLLATE latin1_general_ci NOT NULL,
+  `candidate_lname` varchar(50) COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`candidate_id`),
   KEY `party_id` (`party_id`),
   KEY `position_id` (`position_id`),
   KEY `student_id` (`student_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=28 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
 
@@ -603,6 +604,17 @@ INSERT INTO `student_info` (`student_id`, `first_name`, `mid_name`, `last_name`,
 ('200907406137', 'Donneil Frederiche', '', 'Yabut', '4', 'Y', 12),
 ('200707403916', 'Aldrin Elbert', '', 'Parati', 'T', 'Y', 12),
 ('200807404851', 'Raymond Joseph', '', 'Tejada', 'T', 'Y', 12);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tally`
+--
+
+CREATE TABLE IF NOT EXISTS `tally` (
+  `candidate_id` varchar(12) NOT NULL,
+  `student_id` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
