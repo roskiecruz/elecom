@@ -31,10 +31,9 @@
 				<a href="#" class="brand">ELECOM AniVote</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav pull-right">
-						<li><a href="#"><i class="icon-home"></i> Home</a></li>
-						<li><a href="#">Candidates</a></li>
+						<li><a href="studentHomeScroll.php"><i class="icon-home"></i> Home</a></li>
 						<li class="active"><a href="#">Vote</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="logout.php">logout</a></li>
 					</ul>
 				</div>
 			</div>

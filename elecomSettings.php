@@ -7,11 +7,32 @@
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/bootstrap-responsive.css"/>
     <link rel="stylesheet" href="css/bootstrap-editable.css"/>
-</head>
+
+	
+	</head>
+	
+	
 <body>
+<?php
+//Connect to the database	
+	//-------------------------------------------------
+	mysql_connect("localhost", "root", "")
+			or die(mysql_error());
+	//-------------------------------------------------
+	
+//Select Database
+	//-------------------------------------------------
+	mysql_select_db("elecom") 
+		or die(mysql_error());
+	//-----------------------
+// Make a MySQL Connection
+
+ ?>
+
 	<script src="js/jquery-2.0.2.min.js"></script>
 	<script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-editable.js"></script>
+
 	
 	<!-- Start navbar code here -->
 	<div class="navbar navbar-fixed-top navbar-inverse">
@@ -24,7 +45,7 @@
 				<div class="nav-collapse collapse">
 					<ul class="nav pull-right">
 						<li class="active"><a href="elecomSettings.html"><i class="icon-home"></i> Dashboard</a></li>
-						<li><a href="elecomEditCandidate">Candidates</a></li>
+						<li><a href="elecomEditCandidate.html">Candidates</a></li>
 						<li><a href="#">Calendar</a></li>
 						<li><a href="#">Manage</a></li>
 					</ul>
@@ -91,7 +112,20 @@
                                 	<h4>Ernie (TABA)</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">8 out of 10</h4>
+                                	<h4 align="center">
+<?php
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'erns'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?>
+									
+									</h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-warning active">
@@ -102,7 +136,22 @@
                                 	<h4>Kermit (PUGON)</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">3 out of 10</h4>
+                                	<h4 align="center">
+									
+									<?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'kerms'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?>
+									
+									</h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-info active">
@@ -113,7 +162,18 @@
                                 	<h4>Abstain</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">3 out of 10</h4>
+                                	<h4 align="center"><?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'abstainPres'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?></h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-abstain active">
@@ -128,7 +188,18 @@
                                 	<h4>Oscar (TABA CCS)</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">8 out of 10</h4>
+                                	<h4 align="center"><?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'oscar'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?></h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-warning active">
@@ -139,7 +210,18 @@
                                 	<h4>Norris (PUGON CCS)</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">3 out of 10</h4>
+                                	<h4 align="center"><?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'chuck'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?></h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-info active">
@@ -165,7 +247,18 @@
                                 	<h4>Bert (TABA)</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">8 out of 10</h4>
+                                	<h4 align="center"><?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'bert'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?></h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-warning active">
@@ -177,7 +270,18 @@
                                 	<h4>Bird (TABA)</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">8 out of 10</h4>
+                                	<h4 align="center"><?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'bird'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?></h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-warning active">
@@ -189,7 +293,18 @@
                                 	<h4>Piggie (PUGON)</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">3 out of 10</h4>
+                                	<h4 align="center"><?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'pig'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?></h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-info active">
@@ -201,7 +316,18 @@
                                 	<h4>Goku (PUGON)</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">3 out of 10</h4>
+                                	<h4 align="center"><?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'goku'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?></h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-info active">
@@ -213,7 +339,18 @@
                                 	<h4>Abstain</h4>
                                 </div>
                                 <div class="span8">
-                                	<h4 align="center">3 out of 10</h4>
+                                	<h4 align="center"><?php
+
+$result = mysql_query("SELECT COUNT(candidate_name) 
+FROM tally
+WHERE candidate_name = 'abstainLA'") or die(mysql_error());
+
+// Print out result
+while($row = mysql_fetch_array($result)){
+	echo  $row['COUNT(candidate_name)'] . " Votes" ;
+	echo "<br />";
+}
+?></h4>
                                 </div>
                             </div>
                             <div class="progress progress-striped progress-abstain active">

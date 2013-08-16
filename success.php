@@ -3,6 +3,7 @@
 	//----------------------------------------------------------
 	session_start();
 	$var1 = $_SESSION['inputStudentID'];
+	$deg=$_SESSION['deg_prog_code'];
 	//----------------------------------------------------------
 
 //verifies if the voters ID and password are carried to this file	
@@ -44,13 +45,24 @@
 			
 mysql_query("
 
-INSERT INTO `tally` (student_id, candidate_name) VALUES
+INSERT INTO `tally` (student_id, candidate_fname) VALUES
 ( '" . $var1 . "' , '" . $pres ."' ),
 ( '" . $var1 . "' , '" . $LA ."' ),
 ( '" . $var1 . "' , '" . $Batch ."' );
 
-")		
-			
+");		
+
+mysql_query("
+UPDATE student_info
+	SET is_enrolled = 'N' 
+		WHERE	student_id = '" . $var1 . "' 
+	AND is_enrolled = 'Y' 
+
+");	
+session_destroy();
+header('location:index.php');
+exit();
+	
 	//----------------------------------------------------------	
 		
 		

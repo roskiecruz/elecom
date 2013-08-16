@@ -28,32 +28,36 @@ This PHP file is used to confirm the voters username as well as their password
 //Query to see if password & username matches in db
 		//-------------------------------------------------
 		$result = mysql_query("
-		SELECT first_name,last_name, mid_name, deg_prog_name
-			FROM voter, student_info, degree_program
-				WHERE voter.student_id = '" . $username . "' 
-						AND voter.password = '" . $userpass . "'
-						AND voter.student_id = student_info.student_id
-						AND student_info.deg_prog_id = degree_program.deg_prog_id
-		");//END OF QUERY
-		
+		SELECT student_info.is_enrolled, voter.student_id, voter.password 
+			FROM voter, student_info
+				WHERE student_info.student_id LIKE voter.student_id 
+				AND voter.student_id LIKE '" . $username . "' 
+		        AND voter.password LIKE '" . $userpass . "'	
+							
+		"); //END OF QUERY
+		$course=mysql_query("
+		SELECT deg_prog_code
+		FROM degree_program Natural JOIN student_info
+			WHERE student_id LIKE '" . $username . "'
+		");
 //Check if query returned a result (meaning the password and username match)
 		//-------------------------------------------------
-		
-	if ($userpass == $elecom_pass && $username== $elecomname)
-		{//directs the user to the elecm control panel
-			header("location: elecomSetting.html");
-		}
-	else if($result)
+$degree=mysql_fetch_array($course);
+$voting=mysql_fetch_array($result);
+	if($voting['is_enrolled'] == 'Y')
 		{
-			echo "Successfully logged in.";	
 		//Saves user's details to session
 			$_SESSION['inputStudentID'] = $username;
-			$_SESSION['inputPassword'] = $userpass;
-		//directs the user to the voter homepage	
-		 header("location:studentHomeScroll.html");	
+			$_SESSION['deg_prog_code'] = $Deg;
+				header("location:studentHomeScroll.php");	
 		}
-		else
+		else if( $username == '200907409696' && $userpass == '1ateneo1' )
+		{
+			header('location:elecomSettings2.php');
+		}
+		else{
 			echo "Wrong Username or Password. Try again.";
-	
+				header("location:index.php");
+	}
 
 ?><!--END OF PHP -->
